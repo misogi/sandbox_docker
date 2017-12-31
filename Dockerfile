@@ -19,6 +19,8 @@ RUN useradd -m web && \
     mkdir -p ${APP_ROOT}/tmp && \
     chown web:web ${APP_ROOT}/tmp
 
-VOLUME [ ${APP_ROOT}"/tmp" ]
+VOLUME ["${APP_ROOT}/tmp"]
 
 USER web
+
+WORKDIR ${APP_ROOT}
